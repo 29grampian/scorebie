@@ -1,0 +1,18 @@
+<div >
+   
+
+
+@switch(isLogin) {
+  @case(false) {
+    <input type="email" [(ngModel)]="email" placeholder="Email">
+    <input type="password" [(ngModel)]="password" placeholder="Password">
+    <button (click)="login()">Login</button>
+    <button (click)="loginWithGoogle()">Sign in with Google</button>
+
+  }
+  @case(true) {
+    <button (click)="logout()">Logout</button>
+
+  }
+}
+</div>
